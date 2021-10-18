@@ -20,3 +20,8 @@ case "$OS" in
 esac
 
 ansible-playbook ansible/main.yml "$@"
+
+# Alert that the script is complete
+if command -v terminal-notifier 1>/dev/null 2>&1; then
+    notify-send "Local environment setup complete." "The automated installation of your system is complete." -i face-smirk
+fi
