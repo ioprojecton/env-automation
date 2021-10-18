@@ -1,0 +1,10 @@
+---
+# A series of apt packages to include
+system_packages:
+  - curl
+  - git
+  - vim
+  - dkms
+  # Git diffing tool
+  - gitk
+  - fish

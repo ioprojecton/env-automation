@@ -1,0 +1,32 @@
+#################################################
+# Autmated setup of local environment
+#################################################
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  vars_files:
+    - vars/default.yml
+
+  roles:
+    - role: drivers
+      tags:
+        - drivers
+
+  tasks:
+    - name: Install prerequisits
+      apt: name=aptitude update_cache=yes state=present force_apt_get=yes
+
+# Install Packages
+    - name: Update apt
+      apt: update_cache=yes
+
+    - name: Install required system packages
+      apt: name={{ system_packages }} state=present
+
+    # TODO: Get default shell setting to work
+    # - name: Set "fish" as default shell
+    #  command: chsh -s /usr/bin/fish
+    #  tags:
+    #    - default

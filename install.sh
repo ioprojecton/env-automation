@@ -19,4 +19,4 @@ case "$OS" in
         exit 1
 esac
 
-ansible-playbook ansible/playbook.yml
+ansible-playbook ansible/main.yml "$@"

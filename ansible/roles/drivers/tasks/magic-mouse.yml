@@ -1,0 +1,5 @@
+---
+- name: Download Linux Apple Magic Mouse 2 and Magic Trackpad 2 Driver
+  command: bash ./scripts/magic-mouse-install.sh
+  tags:
+    - drivers
