@@ -1,0 +1,19 @@
+{
+  "name": "env-automation",
+  "version": "1.0.0",
+  "description": "My personal linux automation system with plans for other OS support when needed.  Looking to try using npm with a task runner over ansible",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickLediet/env-automation.git"
+  },
+  "author": "Nicholas Lediet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickLediet/env-automation/issues"
+  },
+  "homepage": "https://github.com/NickLediet/env-automation#readme"
+}
