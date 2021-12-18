@@ -19,6 +19,7 @@ case "$OS" in
         exit 1
 esac
 
+ansible-galaxy install -r ./ansible/requirements.yml
 ansible-playbook ansible/main.yml "$@"
 
 # Alert that the script is complete

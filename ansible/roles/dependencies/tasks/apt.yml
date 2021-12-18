@@ -1,0 +1,22 @@
+#################################################
+# Commands related to apt installation.
+#################################################
+---
+- name: Install prerequisits
+  apt: name=aptitude update_cache=yes state=present force_apt_get=yes
+  tags:
+    - apt
+    - dependency
+
+# Install Packages
+- name: Update apt
+  apt: update_cache=yes
+  tags:
+    - apt
+    - dependency
+
+- name: Install required system packages
+  apt: name={{ system_packages }} state=present
+  tags:
+    - apt
+    - dependency

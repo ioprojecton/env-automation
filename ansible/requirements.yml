@@ -1,0 +1,6 @@
+#################################################
+# Ansible Galaxy Dependencies
+#################################################
+
+# Fish: IInstall fish shell and fisher plugin manager
+- src: gbitdev.fish
