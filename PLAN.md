@@ -29,3 +29,5 @@
 - index.js
 - setup.sh
 
+## Apt Packages
+- [fzf](https://github.com/junegunn/fzf#installation)
