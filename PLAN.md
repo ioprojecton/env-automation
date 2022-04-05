@@ -31,3 +31,4 @@
 
 ## Apt Packages
 - [fzf](https://github.com/junegunn/fzf#installation)
+- [fonts-powerline](https://github.com/powerline/fonts)
