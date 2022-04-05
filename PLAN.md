@@ -31,4 +31,13 @@
 
 ## Apt Packages
 - [fzf](https://github.com/junegunn/fzf#installation)
-- [fonts-powerline](https://github.com/powerline/fonts)
+
+
+## Fonts installation
+```sh
+# Download and unzip the font:
+wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip
+unzip JetBrainsMono-1.0.0.zip
+# Install the font to either the user’s font directory
+mv JetBrainsMono-*.ttf ~/.local/share/fonts/
+```
