@@ -37,7 +37,9 @@
 ```sh
 # Download and unzip the font:
 wget https://download.jetbrains.com/fonts/JetBrainsMono-2.242.zip
-unzip JetBrainsMono-1.0.0.zip
+unzip JetBrainsMono-2.242.zip
 # Install the font to either the user’s font directory
-mv JetBrainsMono-*.ttf ~/.local/share/fonts/
+mv fonts/ttf/JetBrainsMono-*.ttf ~/.local/share/fonts/
+# Remove the fonts dir
+rm -rf fonts
 ```
