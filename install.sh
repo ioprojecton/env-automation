@@ -1,11 +1,9 @@
 #!/bin/bash -e
-if [ "$(whoami)" != "root" ]; then
-    echo "Must run as root"
+[ $UID != 0 ] || { echo "Must run as root"; exit 1; }
 
-    exit 1
-fi
-
-OS=$(cat /etc/os-release | grep ID_LIKE | cut -d '=' -f 2)
+OS=$(< "/etc/os-release")
+OS=${OS#*ID_LIKE=}
+OS=${OS%%$'\n'*}
 
 case "$OS" in
     arch)
@@ -23,6 +21,6 @@ ansible-galaxy install -r ./ansible/requirements.yml
 ansible-playbook ansible/main.yml "$@"
 
 # Alert that the script is complete
-if command -v terminal-notifier 1>/dev/null 2>&1; then
+if command -v terminal-notifier &>/dev/null; then
     notify-send "Local environment setup complete." "The automated installation of your system is complete." -i face-smirk
 fi
